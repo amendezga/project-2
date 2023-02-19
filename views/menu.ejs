@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="stylesheet" type="text/css" href="/menustyle.css">
   <header>
     <h1>McBurgies</h1>
   </header>
@@ -22,22 +22,15 @@
   </nav>
   <main>
     <section id="featured-burgers">
-      <h2>Featured Burgers</h2>
+      <h2>The Menu</h2>
       <ul>
-        <li>
-          <h3>The Classic</h3>
-          <p>A classic cheeseburger with all the fixings.</p>
-        </li>
-        <li>
-          <h3>The BBQ Burger</h3>
-          <p>A cheeseburger topped with BBQ sauce, crispy onion rings, and cheddar cheese.</p>
-        </li>
-        <li>
-          <h3>The Veggie Burger</h3>
-          <p>A delicious vegetarian burger made with a mix of vegetables and spices.</p>
-        </li>
+        <% burgers.forEach(function(burger) { %>
+          <li class="items">
+            <a href="/menu/<%= burger.id %>"><%= burger.name %></a>
+          </li>
+        <% }); %>
       </ul>
-    </section>
+      
     <div id="contact-us">
       <h2>Contact Us</h2>
       <ul>

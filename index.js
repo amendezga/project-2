@@ -1,4 +1,6 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const burgers = require('./models/burgers');
 const app = express();
 
 
@@ -8,8 +10,12 @@ app.use(express.static('./public'));
 
 // index
 app.get('/', (req, res) => {
-    res.render('index.ejs');
-    });
+  res.render('index.ejs');
+});
+
+app.get('/menu', (req, res) => {
+  res.render('menu.ejs', {burgers})
+})
 
 // new
 
@@ -32,4 +38,3 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
   console.log('Server is listening on port 3000');
 });
-

@@ -1,64 +1,80 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9a602;
-  }
-  
-  header {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    color: #f9a602;
-    margin: 0;
-  }
-
-  nav {
-    background-color: #333;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9a602;
 }
-  
-  nav li {
-    margin: 0 10px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #f9a602;
-    font-weight: bold;
-    padding: 10px;
-    display: block;
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  section {
-    background-color: #fff;
-    padding: 20px;
-    width: 80%;
-    text-align: center;
-    box-shadow: 0px 0px 10px #333;
-    margin-bottom: 20px;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
+
+#featured-burgers {
+  width: 900px;
+}
+
+#contact-us {
+  max-height: 20px;
+  background-color: #f9a602;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #f9a602;
+  margin: 0;
+}
+
+nav {
+  background-color: #333;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f9a602;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+section {
+  background-color: #fff;
+  padding: 20px;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0px 0px 10px #333;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
