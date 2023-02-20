@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just a Burger Restaurant</title>
+</head>
+
+<body>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <header>
+    <h1>McBurgies</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/menu">Menu</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+
+  <form action="/create" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+  
+    <label for="protein">Protein:</label>
+    <select id="protein" name="protein">
+      <option value="beef">Beef patty</option>
+      <option value="chicken">Chicken patty</option>
+      <option value="fish">Fish fillet</option>
+      <option value="impossible">Impossible patty</option>
+    </select>
+  
+    <label for="greens">Greens:</label>
+    <select id="greens" name="greens">
+      <option value="lettuce">Lettuce</option>
+      <option value="spinach">Spinach</option>
+      <option value="kale">Kale</option>
+    </select>
+  
+    <label for="topping1">Topping 1:</label>
+    <select id="topping1" name="topping1">
+      <option value="tomato">Tomato</option>
+      <option value="onion">Onion</option>
+      <option value="pickles">Pickles</option>
+    </select>
+  
+    <label for="topping2">Topping 2:</label>
+    <select id="topping2" name="topping2">
+      <option value="tomato">Tomato</option>
+      <option value="onion">Onion</option>
+      <option value="pickles">Pickles</option>
+    </select>
+  
+    <label for="sauce">Sauce:</label>
+    <select id="sauce" name="sauce">
+      <option value="special">Special sauce</option>
+      <option value="mayo">Mayonnaise</option>
+      <option value="tartar">Tartar sauce</option>
+      <option value="bbq sauce">BBQ sauce</option>
+    </select>
+  
+    <button type="submit">Create Burger</button>
+  </form>
+  
+      
+    <div id="contact-us">
+      <h2>Contact Us</h2>
+      <ul>
+        <li>Phone: 555-555-5555</li>
+        <li>Email: info@McBurgies.com</li>
+        <li>Address: 123 Main St, Springfield USA</li>
+      </ul>
+    </div>
+  <footer>
+    <p>&copy; 2023 McBurgies</p>
+  </footer>
+</body>
+
+</html>
