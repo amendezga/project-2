@@ -28,6 +28,15 @@ app.get('/menu', (req, res) => {
 // edit
 
 // show
+app.get('/menu/:id', (req, res) => {
+  const burgerId = req.params.id;
+  const burger = burgers.find(burger => burger.id === Number(burgerId));
+  if (burger) {
+    res.render('show.ejs', { burger: burger });
+  } else {
+    res.status(404).send('Burger not found');
+  }
+});
 
 
 
