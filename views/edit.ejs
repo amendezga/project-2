@@ -1,4 +1,3 @@
-Copy code
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,65 +20,85 @@ Copy code
       <li><a href="/about">About</a></li>
     </ul>
   </nav>
-
+<main>
+<section>
+  
   <form method="POST" action="/menu/<%= burger.id %>?_method=PUT">
+    <div>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" value="<%=burger.name%>">
-  
-    <label for="protein">Protein:</label>
-    <select id="protein" name="protein">
-      <option value="beef" <% if(burger.protein === 'beef') { %> selected <% } %> >Beef patty</option>
-      <option value="chicken" <% if(burger.protein === 'chicken') { %> selected <% } %> >Chicken patty</option>
-      <option value="fish" <% if(burger.protein === 'fish') { %> selected <% } %> >Fish fillet</option>
-      <option value="impossible" <% if(burger.protein === 'impossible') { %> selected <% } %> >Impossible patty</option>
-    </select>
-  
-    <label for="greens">Greens:</label>
-    <select id="greens" name="greens">
-      <option value="lettuce" <% if(burger.greens === 'lettuce') { %> selected <% } %> >Lettuce</option>
-      <option value="spinach" <% if(burger.greens === 'spinach') { %> selected <% } %> >Spinach</option>
-      <option value="kale" <% if(burger.greens === 'kale') { %> selected <% } %> >Kale</option>
-    </select>
-  
-    <label for="topping1">Topping 1:</label>
-    <select id="topping1" name="topping1">
+      <input type="text" id="name" name="name" value="<%=burger.name%>">
+    </div>
+
+      <div>
+        <label for="protein">Protein:</label>
+        <select id="protein" name="protein">
+          <option value="beef" <% if(burger.protein === 'beef') { %> selected <% } %> >Beef patty</option>
+          <option value="chicken" <% if(burger.protein === 'chicken') { %> selected <% } %> >Chicken patty</option>
+          <option value="fish" <% if(burger.protein === 'fish') { %> selected <% } %> >Fish fillet</option>
+          <option value="impossible" <% if(burger.protein === 'impossible') { %> selected <% } %> >Impossible patty</option>
+        </select>
+      </div>
+      
+      <div>
+        <label for="greens">Greens:</label>
+        <select id="greens" name="greens">
+          <option value="lettuce" <% if(burger.greens === 'lettuce') { %> selected <% } %> >Lettuce</option>
+          <option value="spinach" <% if(burger.greens === 'spinach') { %> selected <% } %> >Spinach</option>
+          <option value="kale" <% if(burger.greens === 'kale') { %> selected <% } %> >Kale</option>
+        </select>
+      </div>
+
+    <div>
+      <label for="topping1">Topping 1:</label>
+      <select id="topping1" name="topping1">
         <option value="tomato" <% if(burger.topping1 === 'tomato') { %> selected <% } %> >Tomato</option>
         <option value="onion" <% if(burger.topping1 === 'onion') { %> selected <% } %> >Onion</option>
         <option value="pickles" <% if(burger.topping1 === 'pickles') { %> selected <% } %> >Pickles</option>
         <option value="cheddar" <% if(burger.topping1 === 'cheddar') { %> selected <% } %> >Cheddar Cheese</option>
         <option value="swiss" <% if(burger.topping1 === 'swiss') { %> selected <% } %> >Swiss Cheese</option>
         <option value="vegan" <% if(burger.topping1 === 'vegan') { %> selected <% } %> >Vegan Cheese</option>
-    </select>
-
-    <label for="topping2">Topping 2:</label>
-    <select id="topping2" name="topping2">
-      <option value="tomato" <% if (burger.topping2 === 'tomato') { %>selected<% } %>>Tomato</option>
-      <option value="onion" <% if (burger.topping2 === 'onion') { %>selected<% } %>>Onion</option>
-      <option value="pickles" <% if (burger.topping2 === 'pickles') { %>selected<% } %>>Pickles</option>
-      <option value="cheddar" <% if (burger.topping2 === 'cheddar cheese') { %>selected<% } %>>Cheddar Cheese</option>
-      <option value="swiss" <% if (burger.topping2 === 'swiss cheese') { %>selected<% } %>>Swiss Cheese</option>
-      <option value="vegan" <% if (burger.topping2 === 'vegan cheese') { %>selected<% } %>>Vegan Cheese</option>
-    </select>
+      </select>
+    </div>
+      
+    <div>
+      <label for="topping2">Topping 2:</label>
+      <select id="topping2" name="topping2">
+        <option value="tomato" <% if (burger.topping2 === 'tomato') { %>selected<% } %>>Tomato</option>
+        <option value="onion" <% if (burger.topping2 === 'onion') { %>selected<% } %>>Onion</option>
+        <option value="pickles" <% if (burger.topping2 === 'pickles') { %>selected<% } %>>Pickles</option>
+        <option value="cheddar" <% if (burger.topping2 === 'cheddar cheese') { %>selected<% } %>>Cheddar Cheese</option>
+        <option value="swiss" <% if (burger.topping2 === 'swiss cheese') { %>selected<% } %>>Swiss Cheese</option>
+        <option value="vegan" <% if (burger.topping2 === 'vegan cheese') { %>selected<% } %>>Vegan Cheese</option>
+      </select>
+    </div>
     
-    <label for="sauce">Sauce:</label>
-    <select id="sauce" name="sauce">
-      <option value="special" <% if (burger.sauce === 'special sauce') { %>selected<% } %>>Special sauce</option>
-      <option value="mayo" <% if (burger.sauce === 'mayonnaise') { %>selected<% } %>>Mayonnaise</option>
-      <option value="tartar" <% if (burger.sauce === 'tartar sauce') { %>selected<% } %>>Tartar sauce</option>
-      <option value="bbq sauce" <% if (burger.sauce === 'bbq sauce') { %>selected<% } %>>BBQ sauce</option>
-    </select>
+    <div>
+      <label for="sauce">Sauce:</label>
+      <select id="sauce" name="sauce">
+        <option value="special" <% if (burger.sauce === 'special sauce') { %>selected<% } %>>Special sauce</option>
+        <option value="mayo" <% if (burger.sauce === 'mayonnaise') { %>selected<% } %>>Mayonnaise</option>
+        <option value="tartar" <% if (burger.sauce === 'tartar sauce') { %>selected<% } %>>Tartar sauce</option>
+        <option value="bbq sauce" <% if (burger.sauce === 'bbq sauce') { %>selected<% } %>>BBQ sauce</option>
+      </select>
+    </div>
     
-    <label for="price">Price:</label>
-    <input type="number" id="price" name="price" value="<%= burger.price %>">
+    <div>
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" value="<%= burger.price %>">
+    </div>
     
-    <label for="description">Description:</label>
-    <textarea id="description" name="description"><%= burger.description %></textarea>
-
-    <button type="submit">Update Burger</button>
-
-</form>
-    <footer>
-        <p>&copy; 2023 McBurgies</p>
-      </footer>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"><%= burger.description %></textarea>
+    </div>
+    
+    <button class="submit" type="submit">Update Burger</button>
+    
+  </form>
+</section>
+</main>
+<footer>
+  <p>&copy; 2023 McBurgies</p>
+</footer>
 </body>
 </html>    

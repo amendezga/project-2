@@ -20,35 +20,38 @@
       <li><a href="/about">About</a></li>
     </ul>
   </nav>
-  <h1><%= burger.name %></h1>
-  <p><%= burger.description %></p>
-  <p><strong>Ingredients:</strong></p>
-  <ul>
-    <% burger.ingredients.forEach(function(ingredient) { %>
-      <li><%= ingredient %></li>
-    <% }); %>
-  </ul>
-  <p><strong>Price:</strong> $<%= burger.price.toFixed(2) %></p>
-  
-  <div class="button-group">
-    <a href="/menu/<%= burger.id %>/edit" class="button">Edit</a>
-    <form method="POST" action="/menu/<%= burger.id %>/delete?_method=DELETE">
-      <input type="hidden" name="_method" value="DELETE">
-      <button type="submit" class="button">Delete</button>
-    </form>
-  </div>
-  
-  <div id="contact-us">
-    <h2>Contact Us</h2>
-    <ul>
-      <li>Phone: 555-555-5555</li>
-      <li>Email: info@McBurgies.com</li>
-      <li>Address: 123 Main St, Springfield USA</li>
-    </ul>
-  </div>
+
+  <main>
+
+    <section>
+      
+      <h1 class="burger-name"><%= burger.name %></h1>
+      <p><%= burger.description %></p>
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <% burger.ingredients.forEach(function(ingredient) { %>
+          <li class="ingredients"><%= ingredient %></li>
+          <% }); %>
+        </ul>
+        <p><strong>Price:</strong> $<%= burger.price.toFixed(2) %></p>
+        
+        <div class="button-group">
+          <form method="GET" action="/menu/<%= burger.id %>/edit">
+            <button type="submit" class="button">Edit</button>
+          </form>
+          <form method="POST" action="/menu/<%= burger.id %>/delete?_method=DELETE">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="button">Delete</button>
+          </form>
+        </div>
+        
+      </section>
+    </main>
+      
+      
   <footer>
     <p>&copy; 2023 McBurgies</p>
   </footer>
 </body>
-
+  
 </html>

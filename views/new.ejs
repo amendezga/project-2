@@ -20,63 +20,79 @@
       <li><a href="/about">About</a></li>
     </ul>
   </nav>
+<main>
+<section class="form">
 
   <form action="/create" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
-  
-    <label for="protein">Protein:</label>
-    <select id="protein" name="protein">
-      <option value="beef patty">Beef patty</option>
-      <option value="chicken patty">Chicken patty</option>
-      <option value="fish fillet">Fish fillet</option>
-      <option value="impossible patty">Impossible patty</option>
-    </select>
-  
-    <label for="greens">Greens:</label>
-    <select id="greens" name="greens">
-      <option value="lettuce">Lettuce</option>
-      <option value="spinach">Spinach</option>
-      <option value="kale">Kale</option>
-    </select>
-  
-    <label for="topping1">Topping 1:</label>
-    <select id="topping1" name="topping1">
+    <div class="label">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+
+    <div>
+      <label for="protein">Protein:</label>
+      <select id="protein" name="protein">
+        <option value="beef patty">Beef patty</option>
+        <option value="chicken patty">Chicken patty</option>
+        <option value="fish fillet">Fish fillet</option>
+        <option value="impossible patty">Impossible patty</option>
+      </select>
+    </div>
+      
+    <div>
+      <label for="greens">Greens:</label>
+      <select id="greens" name="greens">
+        <option value="lettuce">Lettuce</option>
+        <option value="spinach">Spinach</option>
+        <option value="kale">Kale</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="topping1">Topping 1:</label>
+      <select id="topping1" name="topping1">
         <option value="tomato">Tomato</option>
         <option value="onion">Onion</option>
         <option value="pickles">Pickles</option>
         <option value="cheddar cheese">Cheddar Cheese</option>
         <option value="swiss cheese">Swiss Cheese</option>
         <option value="vegan cheese">Vegan Cheese</option>
-    </select>
-  
-    <label for="topping2">Topping 2:</label>
-    <select id="topping2" name="topping2">
-      <option value="tomato">Tomato</option>
-      <option value="onion">Onion</option>
-      <option value="pickles">Pickles</option>
-      <option value="cheddar cheese">Cheddar Cheese</option>
-      <option value="swiss cheese">Swiss Cheese</option>
-      <option value="vegan cheese">Vegan Cheese</option>
-    </select>
-  
-    <label for="sauce">Sauce:</label>
-    <select id="sauce" name="sauce">
-      <option value="special sauce">Special sauce</option>
-      <option value="mayonnaise">Mayonnaise</option>
-      <option value="tartar sauce">Tartar sauce</option>
-      <option value="bbq sauce">BBQ sauce</option>
-    </select>
-  
-    <button type="submit">Create Burger</button>
+      </select>
+    </div>
+
+    <div>
+      <label for="topping2">Topping 2:</label>
+      <select id="topping2" name="topping2">
+        <option value="tomato">Tomato</option>
+        <option value="onion">Onion</option>
+        <option value="pickles">Pickles</option>
+        <option value="cheddar cheese">Cheddar Cheese</option>
+        <option value="swiss cheese">Swiss Cheese</option>
+        <option value="vegan cheese">Vegan Cheese</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="sauce">Sauce:</label>
+      <select id="sauce" name="sauce">
+        <option value="special sauce">Special sauce</option>
+        <option value="mayonnaise">Mayonnaise</option>
+        <option value="tartar sauce">Tartar sauce</option>
+        <option value="bbq sauce">BBQ sauce</option>
+      </select>
+    </div>
+    
+    <button class="submit" type="submit">Create Burger</button>
   </form>
   
-      
-      </ul>
-    </div>
-  <footer>
-    <p>&copy; 2023 McBurgies</p>
-  </footer>
+</section>
+</main>
+
+</ul>
+</div>
+<footer>
+  <p>&copy; 2023 McBurgies</p>
+</footer>
 </body>
 
 </html>
