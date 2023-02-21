@@ -1,4 +1,4 @@
-# 3 Point Contest
+# McBurgies Menu
 
 This app is the admin-side version of a Burger Restuarant called McBurgies. On this site, there's a home page, a menu, and an about page.
 
@@ -24,7 +24,7 @@ MVP was achieved. Full CRUD operations work as intended and there are no visual 
 ## Link to Deployed App
 [link to deployed app](https://whispering-meadow-70784.herokuapp.com/)
 
-## Future Improvements
+## Next Steps
 - There is currently a bug where if you delete a menu item before adding a new one, the id value of the item could be the same as an already existing id value. Looking to fix this ASAP
 - In the Home page, I'd like to add a feature that allows the user to post new articles to depict any news they'd like to share (closing for a holiday, upcoming events, etc).
 - The site needs better styling, I'm hoping to add more so that it looks a bit more presentable.
