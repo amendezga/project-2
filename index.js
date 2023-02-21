@@ -20,12 +20,12 @@ app.get('/', (req, res) => {
 
 app.get('/menu', (req, res) => {
   res.render('menu.ejs', {burgers})
-})
+});
 
 // new
 app.get('/new', (req, res) => {
   res.render('new.ejs')
-})
+});
 
 // delete
 app.delete('/menu/:id/delete', (req, res) => {
@@ -40,16 +40,19 @@ app.delete('/menu/:id/delete', (req, res) => {
 });
 
 // update
-app.post('/menu/:id/update', (req, res) => {
+app.put('/menu/:id', (req, res) => {
   const burgerId = req.params.id;
-  const burgerIndex = Number(burgerId) - 1;
-  if (burgerIndex >= 0 && burgerIndex < burgers.length) {
-    const { name, protein, greens, topping1, topping2, sauce } = req.body;
-    const ingredients = [protein, greens, topping1, topping2, sauce];
-    const updatedBurger = { ...burgers[burgerIndex], name, ingredients };
-    burgers[burgerIndex] = updatedBurger;
+  const burgerIndex = burgers.findIndex(burger => burger.id === Number(burgerId));
+  if (burgerIndex >= 0) {
+    const { name, protein, greens, topping1, topping2, sauce, price, description } = req.body;
+
+    burgers[burgerIndex].name = name;
+    burgers[burgerIndex].ingredients = [protein, greens, topping1, topping2, sauce];
+    burgers[burgerIndex].price = parseFloat(price);
+    burgers[burgerIndex].description = description;
+  
     res.redirect('/menu');
-  }
+  } 
 });
 
 // create

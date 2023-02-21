@@ -22,7 +22,7 @@ Copy code
     </ul>
   </nav>
 
-  <form action="/<%=burger._id%>?_method=PUT" method="POST">
+  <form method="POST" action="/menu/<%= burger.id %>?_method=PUT">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" value="<%=burger.name%>">
   
@@ -56,16 +56,16 @@ Copy code
       <option value="tomato" <% if (burger.topping2 === 'tomato') { %>selected<% } %>>Tomato</option>
       <option value="onion" <% if (burger.topping2 === 'onion') { %>selected<% } %>>Onion</option>
       <option value="pickles" <% if (burger.topping2 === 'pickles') { %>selected<% } %>>Pickles</option>
-      <option value="cheddar" <% if (burger.topping2 === 'cheddar') { %>selected<% } %>>Cheddar Cheese</option>
-      <option value="swiss" <% if (burger.topping2 === 'swiss') { %>selected<% } %>>Swiss Cheese</option>
-      <option value="vegan" <% if (burger.topping2 === 'vegan') { %>selected<% } %>>Vegan Cheese</option>
+      <option value="cheddar" <% if (burger.topping2 === 'cheddar cheese') { %>selected<% } %>>Cheddar Cheese</option>
+      <option value="swiss" <% if (burger.topping2 === 'swiss cheese') { %>selected<% } %>>Swiss Cheese</option>
+      <option value="vegan" <% if (burger.topping2 === 'vegan cheese') { %>selected<% } %>>Vegan Cheese</option>
     </select>
     
     <label for="sauce">Sauce:</label>
     <select id="sauce" name="sauce">
-      <option value="special" <% if (burger.sauce === 'special') { %>selected<% } %>>Special sauce</option>
-      <option value="mayo" <% if (burger.sauce === 'mayo') { %>selected<% } %>>Mayonnaise</option>
-      <option value="tartar" <% if (burger.sauce === 'tartar') { %>selected<% } %>>Tartar sauce</option>
+      <option value="special" <% if (burger.sauce === 'special sauce') { %>selected<% } %>>Special sauce</option>
+      <option value="mayo" <% if (burger.sauce === 'mayonnaise') { %>selected<% } %>>Mayonnaise</option>
+      <option value="tartar" <% if (burger.sauce === 'tartar sauce') { %>selected<% } %>>Tartar sauce</option>
       <option value="bbq sauce" <% if (burger.sauce === 'bbq sauce') { %>selected<% } %>>BBQ sauce</option>
     </select>
     
@@ -75,6 +75,9 @@ Copy code
     <label for="description">Description:</label>
     <textarea id="description" name="description"><%= burger.description %></textarea>
 
+    <button type="submit">Update Burger</button>
+
+</form>
     <footer>
         <p>&copy; 2023 McBurgies</p>
       </footer>
