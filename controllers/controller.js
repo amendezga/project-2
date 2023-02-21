@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
 const burgers = require('../models/burgers');
 
 // index
@@ -10,6 +9,10 @@ router.get('/', (req, res) => {
 
 router.get('/menu', (req, res) => {
   res.render('menu.ejs', {burgers})
+});
+
+router.get('/about', (req, res) => {
+  res.render('about.ejs')
 });
 
 // new
