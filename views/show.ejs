@@ -21,23 +21,30 @@
     </ul>
   </nav>
   <h1><%= burger.name %></h1>
-<p><%= burger.description %></p>
-<p><strong>Ingredients:</strong></p>
-<ul>
-  <% burger.ingredients.forEach(function(ingredient) { %>
-    <li><%= ingredient %></li>
-  <% }); %>
-</ul>
-<p><strong>Price:</strong> $<%= burger.price.toFixed(2) %></p>
-      
-    <div id="contact-us">
-      <h2>Contact Us</h2>
-      <ul>
-        <li>Phone: 555-555-5555</li>
-        <li>Email: info@McBurgies.com</li>
-        <li>Address: 123 Main St, Springfield USA</li>
-      </ul>
-    </div>
+  <p><%= burger.description %></p>
+  <p><strong>Ingredients:</strong></p>
+  <ul>
+    <% burger.ingredients.forEach(function(ingredient) { %>
+      <li><%= ingredient %></li>
+    <% }); %>
+  </ul>
+  <p><strong>Price:</strong> $<%= burger.price.toFixed(2) %></p>
+  
+  <div class="button-group">
+    <a href="/menu/<%= burger.id %>/edit" class="button">Edit</a>
+    <form method="POST" action="/menu/<%= burger.id %>?_method=DELETE">
+      <button type="submit" class="button">Delete</button>
+    </form>
+  </div>
+  
+  <div id="contact-us">
+    <h2>Contact Us</h2>
+    <ul>
+      <li>Phone: 555-555-5555</li>
+      <li>Email: info@McBurgies.com</li>
+      <li>Address: 123 Main St, Springfield USA</li>
+    </ul>
+  </div>
   <footer>
     <p>&copy; 2023 McBurgies</p>
   </footer>

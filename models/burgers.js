@@ -3,28 +3,28 @@ const burgers = [
     id: 1,
     name: 'Classic Cheeseburger',
     price: 7.99,
-    ingredients: ['beef patty', 'cheddar cheese', 'lettuce', 'tomato', 'onion', 'pickles', 'special sauce'],
+    ingredients: ['beef patty', 'lettuce', 'tomato', 'cheddar cheese', 'special sauce'],
     description: 'A classic cheeseburger with all the fixings.'
   },
   {
     id: 2,
-    name: 'Bacon Cheeseburger',
+    name: 'BBQ Cheeseburger',
     price: 8.99,
-    ingredients: ['beef patty', 'bacon', 'cheddar cheese', 'lettuce', 'tomato', 'onion', 'pickles', 'special sauce'],
-    description: 'A juicy cheeseburger with crispy bacon.'
+    ingredients: ['beef patty', 'lettuce', 'tomato', 'cheddar cheese', 'bbq sauce'],
+    description: 'A juicy cheeseburger with a BBQ kick.'
   },
   {
     id: 3,
     name: 'Veggie Burger',
     price: 6.99,
-    ingredients: ['veggie patty', 'lettuce', 'tomato', 'onion', 'pickles', 'special sauce'],
+    ingredients: ['veggie patty', 'lettuce', 'tomato', 'cheddar cheese', 'special sauce'],
     description: 'A vegetarian option with a delicious veggie patty.'
   },
   {
     id: 4,
     name: 'Chicken Burger',
     price: 7.99,
-    ingredients: ['chicken patty', 'cheddar cheese', 'lettuce', 'tomato', 'onion', 'pickles', 'mayonnaise'],
+    ingredients: ['chicken patty', 'lettuce', 'tomato', 'swiss cheese', 'mayonnaise'],
     description: 'A chicken burger with a crispy patty and all the toppings.'
   },
   {
@@ -38,7 +38,7 @@ const burgers = [
     id: 6,
     name: 'Impossible Burger',
     price: 9.99,
-    ingredients: ['impossible patty', 'cheddar cheese', 'lettuce', 'tomato', 'onion', 'pickles', 'special sauce'],
+    ingredients: ['impossible patty', 'lettuce', 'tomato', 'vegan cheese', 'special sauce'],
     description: 'A vegetarian option with a delicious impossible patty.'
   }
 ];

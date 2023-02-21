@@ -1,0 +1,82 @@
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Burger</title>
+</head>
+
+<body>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <header>
+    <h1>McBurgies</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/menu">Menu</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+
+  <form action="/<%=burger._id%>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<%=burger.name%>">
+  
+    <label for="protein">Protein:</label>
+    <select id="protein" name="protein">
+      <option value="beef" <% if(burger.protein === 'beef') { %> selected <% } %> >Beef patty</option>
+      <option value="chicken" <% if(burger.protein === 'chicken') { %> selected <% } %> >Chicken patty</option>
+      <option value="fish" <% if(burger.protein === 'fish') { %> selected <% } %> >Fish fillet</option>
+      <option value="impossible" <% if(burger.protein === 'impossible') { %> selected <% } %> >Impossible patty</option>
+    </select>
+  
+    <label for="greens">Greens:</label>
+    <select id="greens" name="greens">
+      <option value="lettuce" <% if(burger.greens === 'lettuce') { %> selected <% } %> >Lettuce</option>
+      <option value="spinach" <% if(burger.greens === 'spinach') { %> selected <% } %> >Spinach</option>
+      <option value="kale" <% if(burger.greens === 'kale') { %> selected <% } %> >Kale</option>
+    </select>
+  
+    <label for="topping1">Topping 1:</label>
+    <select id="topping1" name="topping1">
+        <option value="tomato" <% if(burger.topping1 === 'tomato') { %> selected <% } %> >Tomato</option>
+        <option value="onion" <% if(burger.topping1 === 'onion') { %> selected <% } %> >Onion</option>
+        <option value="pickles" <% if(burger.topping1 === 'pickles') { %> selected <% } %> >Pickles</option>
+        <option value="cheddar" <% if(burger.topping1 === 'cheddar') { %> selected <% } %> >Cheddar Cheese</option>
+        <option value="swiss" <% if(burger.topping1 === 'swiss') { %> selected <% } %> >Swiss Cheese</option>
+        <option value="vegan" <% if(burger.topping1 === 'vegan') { %> selected <% } %> >Vegan Cheese</option>
+    </select>
+
+    <label for="topping2">Topping 2:</label>
+    <select id="topping2" name="topping2">
+      <option value="tomato" <% if (burger.topping2 === 'tomato') { %>selected<% } %>>Tomato</option>
+      <option value="onion" <% if (burger.topping2 === 'onion') { %>selected<% } %>>Onion</option>
+      <option value="pickles" <% if (burger.topping2 === 'pickles') { %>selected<% } %>>Pickles</option>
+      <option value="cheddar" <% if (burger.topping2 === 'cheddar') { %>selected<% } %>>Cheddar Cheese</option>
+      <option value="swiss" <% if (burger.topping2 === 'swiss') { %>selected<% } %>>Swiss Cheese</option>
+      <option value="vegan" <% if (burger.topping2 === 'vegan') { %>selected<% } %>>Vegan Cheese</option>
+    </select>
+    
+    <label for="sauce">Sauce:</label>
+    <select id="sauce" name="sauce">
+      <option value="special" <% if (burger.sauce === 'special') { %>selected<% } %>>Special sauce</option>
+      <option value="mayo" <% if (burger.sauce === 'mayo') { %>selected<% } %>>Mayonnaise</option>
+      <option value="tartar" <% if (burger.sauce === 'tartar') { %>selected<% } %>>Tartar sauce</option>
+      <option value="bbq sauce" <% if (burger.sauce === 'bbq sauce') { %>selected<% } %>>BBQ sauce</option>
+    </select>
+    
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" value="<%= burger.price %>">
+    
+    <label for="description">Description:</label>
+    <textarea id="description" name="description"><%= burger.description %></textarea>
+
+    <footer>
+        <p>&copy; 2023 McBurgies</p>
+      </footer>
+</body>
+</html>    
