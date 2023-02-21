@@ -40,7 +40,7 @@ const burgers = [
     price: 9.99,
     ingredients: ['impossible patty', 'lettuce', 'tomato', 'vegan cheese', 'special sauce'],
     description: 'A vegetarian option with a delicious impossible patty.'
-  }
+  } 
 ];
 
 module.exports = burgers;
