@@ -2,12 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const burgers = require('./models/burgers');
+const methodOverride = require('method-override');
 const app = express();
 
 
 // middleware
 app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 
 
 
@@ -26,6 +28,16 @@ app.get('/new', (req, res) => {
 })
 
 // delete
+app.delete('/menu/:id/delete', (req, res) => {
+  const burgerId = req.params.id;
+  const burgerIndex = Number(burgerId) - 1;
+  if (burgerIndex >= 0 && burgerIndex < burgers.length) {
+    burgers.splice(burgerIndex, 1);
+    res.redirect('/menu');
+  } else {
+    res.status(404).send('Burger not found');
+  }
+});
 
 // update
 app.post('/menu/:id/update', (req, res) => {

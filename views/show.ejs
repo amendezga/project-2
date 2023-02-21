@@ -32,7 +32,8 @@
   
   <div class="button-group">
     <a href="/menu/<%= burger.id %>/edit" class="button">Edit</a>
-    <form method="POST" action="/menu/<%= burger.id %>?_method=DELETE">
+    <form method="POST" action="/menu/<%= burger.id %>/delete?_method=DELETE">
+      <input type="hidden" name="_method" value="DELETE">
       <button type="submit" class="button">Delete</button>
     </form>
   </div>
